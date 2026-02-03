@@ -19,7 +19,7 @@ Follow these steps to build and deploy the add‑on locally using clasp:
 ### 1. Clone the project
 ```bash
 git clone https://github.com/sumitramagdalin/sheets-weather-addon.git
-cd sheets-weather-addon
+
 ```
 
 ### 2. Insert your `scriptId` into `.clasp.json`
@@ -28,10 +28,10 @@ Before building or pushing the add‑on, create your own Apps Script project:
 
 ```bash
 npx clasp login
-npx clasp create --type sheets --title "Weather Forecast Add-on"
+npx clasp create --type sheets
 ```
 
-Copy the generated `scriptId` and update `.clasp.json`:
+Copy the generated `scriptId` and update `.clasp.json` in "sheets-weather-addon" project:
 
 ```json
 {
@@ -61,6 +61,7 @@ PropertiesService.getScriptProperties().getProperty("WEATHER_API_KEY");
 
 ### 4. Install dependencies
 ```bash
+cd sheets-weather-addon
 npm install
 ```
 
